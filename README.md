@@ -78,35 +78,17 @@
     </select>
   </header>
   <main>
-    <!-- 札幌 -->
-    <section class="city-section">
-      <h2>Sapporo</h2>
-      <div class="spot">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Sapporo_Clock_Tower_2018.jpg/800px-Sapporo_Clock_Tower_2018.jpg" alt="Sapporo Clock Tower">
-        <h3 data-lang-group="spot1-title">
-          <span class="lang-text lang-active" data-lang="en">Sapporo Clock Tower</span>
-          <span class="lang-text" data-lang="ja">札幌時計台</span>
-          <span class="lang-text" data-lang="zh">札幌钟楼</span>
-          <span class="lang-text" data-lang="fr">Tour de l'horloge de Sapporo</span>
-          <span class="lang-text" data-lang="ru">Башня с часами Саппоро</span>
-        </h3>
-        <p data-lang-group="spot1-desc">
-          <span class="lang-text lang-active" data-lang="en">A historic clock tower built in 1878, symbolizing the city of Sapporo.</span>
-          <span class="lang-text" data-lang="ja">1878年に建てられた歴史的な時計台で、札幌の象徴です。</span>
-          <span class="lang-text" data-lang="zh">建于1878年的历史钟楼，是札幌的象征。</span>
-          <span class="lang-text" data-lang="fr">Une tour de l'horloge historique construite en 1878, symbole de Sapporo.</span>
-          <span class="lang-text" data-lang="ru">Историческая башня с часами, построенная в 1878 году, символ Саппоро.</span>
-        </p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.1460912420575!2d141.35445127609378!3d43.062095371136196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b2985c81c2231%3A0x88f71dbf83e5b45b!2z5LuZ6YO95pWZ5bqX5qCh5Lit5aSu5rC455Sw6ZaA!5e0!3m2!1sja!2sjp!4v1713000000000!5m2!1sja!2sjp"></iframe>
-      </div>
-      <!-- 他の札幌観光地も追加 -->
-    </section>
-
     <!-- 小樽 -->
     <section class="city-section">
-      <h2>Otaru</h2>
+      <h2 data-lang-group="city1-title">
+        <span class="lang-text lang-active" data-lang="en">Otaru</span>
+        <span class="lang-text" data-lang="ja">小樽</span>
+        <span class="lang-text" data-lang="zh">小樽</span>
+        <span class="lang-text" data-lang="fr">Otaru</span>
+        <span class="lang-text" data-lang="ru">Отару</span>
+      </h2>
       <div class="spot">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Otaru_Canal_at_Night.jpg" alt="Otaru Canal">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Otaru_Canal_at_Night.jpg/800px-Otaru_Canal_at_Night.jpg" alt="Otaru Canal">
         <h3 data-lang-group="spot1-title">
           <span class="lang-text lang-active" data-lang="en">Otaru Canal</span>
           <span class="lang-text" data-lang="ja">小樽運河</span>
@@ -123,38 +105,110 @@
         </p>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.852879735252!2d135.26479971151667!3d43.19603527496085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0d5e731c71d54d%3A0x354a93d6cbd88ab5!2sOtaru%20Canal!5e0!3m2!1sja!2sjp!4v1713000000000!5m2!1sja!2sjp"></iframe>
       </div>
+      <!-- 小樽他の観光地 -->
     </section>
 
     <!-- 函館 -->
     <section class="city-section">
-      <h2>Hakodate</h2>
-      <!-- 函館観光地を追加 -->
+      <h2 data-lang-group="city2-title">
+        <span class="lang-text lang-active" data-lang="en">Hakodate</span>
+        <span class="lang-text" data-lang="ja">函館</span>
+        <span class="lang-text" data-lang="zh">函馆</span>
+        <span class="lang-text" data-lang="fr">Hakodate</span>
+        <span class="lang-text" data-lang="ru">Хакодате</span>
+      </h2>
+      <div class="spot">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Hakodate_Mountain_Sunset.jpg" alt="Hakodate Mountain Sunset">
+        <h3 data-lang-group="spot1-title">
+          <span class="lang-text lang-active" data-lang="en">Mount Hakodate</span>
+          <span class="lang-text" data-lang="ja">函館山</span>
+          <span class="lang-text" data-lang="zh">函馆山</span>
+          <span class="lang-text" data-lang="fr">Mont Hakodate</span>
+          <span class="lang-text" data-lang="ru">Гора Хакодате</span>
+        </h3>
+        <p data-lang-group="spot1-desc">
+          <span class="lang-text lang-active" data-lang="en">Famous for its stunning night view, offering a panoramic look at the city of Hakodate.</span>
+          <span class="lang-text" data-lang="ja">函館市を一望できる夜景で有名です。</span>
+          <span class="lang-text" data-lang="zh">以壮丽的夜景而闻名，提供函馆市的全景。</span>
+          <span class="lang-text" data-lang="fr">Célèbre pour sa vue nocturne époustouflante, offrant une vue panoramique sur la ville de Hakodate.</span>
+          <span class="lang-text" data-lang="ru">Известен своим захватывающим ночным видом, который открывает панорамный вид на город Хакодате.</span>
+        </p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1276.8303546193705!2d140.755128048112!3d41.75622682462648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f78b7cc8709cc23%3A0x3a91a9b6b537ccba!2sMount%20Hakodate!5e0!3m2!1sja!2sjp!4v1713000000000!5m2!1sja!2sjp"></iframe>
+      </div>
+      <!-- 函館他の観光地 -->
     </section>
 
     <!-- 釧路 -->
     <section class="city-section">
-      <h2>Kushiro</h2>
-      <!-- 釧路観光地を追加 -->
+      <h2 data-lang-group="city3-title">
+        <span class="lang-text lang-active" data-lang="en">Kushiro</span>
+        <span class="lang-text" data-lang="ja">釧路</span>
+        <span class="lang-text" data-lang="zh">钏路</span>
+        <span class="lang-text" data-lang="fr">Kushiro</span>
+        <span class="lang-text" data-lang="ru">Куширо</span>
+      </h2>
+      <div class="spot">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Kushiro_Shiba_Harbor.jpg" alt="Kushiro Shiba Harbor">
+        <h3 data-lang-group="spot1-title">
+          <span class="lang-text lang-active" data-lang="en">Kushiro Shiba Harbor</span>
+          <span class="lang-text" data-lang="ja">釧路柴港</span>
+          <span class="lang-text" data-lang="zh">钏路柴港</span>
+          <span class="lang-text" data-lang="fr">Port de Shiba à Kushiro</span>
+          <span class="lang-text" data-lang="ru">Порт Шиба в Куширо</span>
+        </h3>
+        <p data-lang-group="spot1-desc">
+          <span class="lang-text lang-active" data-lang="en">Known for its beautiful coastal scenery, ideal for a peaceful walk.</span>
+          <span class="lang-text" data-lang="ja">美しい海岸の景色で知られ、静かな散歩に最適です。</span>
+          <span class="lang-text" data-lang="zh">以美丽的海岸风光而闻名，非常适合安静的散步。</span>
+          <span class="lang-text" data-lang="fr">Connu pour ses magnifiques paysages côtiers, idéal pour une promenade paisible.</span>
+          <span class="lang-text" data-lang="ru">Известен своими прекрасными прибрежными пейзажами, идеально подходит для спокойных прогулок.</span>
+        </p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.4130365097125!2d144.37561191968468!3d43.27801413976793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f7b01e6d4efcc0f%3A0x9b7b7959b71ffb9!2sKushiro%20Shiba%20Harbor!5e0!3m2!1sja!2sjp!4v1713000000000!5m2!1sja!2sjp"></iframe>
+      </div>
+      <!-- 釧路他の観光地 -->
     </section>
 
     <!-- ニセコ -->
     <section class="city-section">
-      <h2>Niseko</h2>
-      <!-- ニセコ観光地を追加 -->
+      <h2 data-lang-group="city4-title">
+        <span class="lang-text lang-active" data-lang="en">Niseko</span>
+        <span class="lang-text" data-lang="ja">ニセコ</span>
+        <span class="lang-text" data-lang="zh">二世古</span>
+        <span class="lang-text" data-lang="fr">Niseko</span>
+        <span class="lang-text" data-lang="ru">Нисеко</span>
+      </h2>
+      <div class="spot">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Niseko_Mountain.jpg" alt="Niseko Mountain">
+        <h3 data-lang-group="spot1-title">
+          <span class="lang-text lang-active" data-lang="en">Niseko Mountain</span>
+          <span class="lang-text" data-lang="ja">ニセコ山</span>
+          <span class="lang-text" data-lang="zh">二世古山</span>
+          <span class="lang-text" data-lang="fr">Mont Niseko</span>
+          <span class="lang-text" data-lang="ru">Гора Нисеко</span>
+        </h3>
+        <p data-lang-group="spot1-desc">
+          <span class="lang-text lang-active" data-lang="en">Famous for its ski resorts and stunning winter views.</span>
+          <span class="lang-text" data-lang="ja">スキーリゾートと素晴らしい冬の景色で有名です。</span>
+          <span class="lang-text" data-lang="zh">以滑雪胜地和美丽的冬季景色而闻名。</span>
+          <span class="lang-text" data-lang="fr">Célèbre pour ses stations de ski et ses magnifiques vues d'hiver.</span>
+          <span class="lang-text" data-lang="ru">Известен своими лыжными курортами и потрясающими зимними пейзажами.</span>
+        </p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.689384284223!2d139.97415155968132!3d42.9302271371338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f7a7a60ec59d13f%3A0x3b0a45e3bc7fc736!2sNiseko%20Mountain!5e0!3m2!1sja!2sjp!4v1713000000000!5m2!1sja!2sjp"></iframe>
+      </div>
+      <!-- ニセコ他の観光地 -->
     </section>
-
   </main>
   <footer class="footer">
-    <p>&copy; 2025 Hokkaido Travel Guide</p>
+    <p>&copy; 2025 Explore Hokkaido</p>
   </footer>
   <script>
-    const selector = document.getElementById('language-selector');
-    selector.addEventListener('change', (e) => {
-      const lang = e.target.value;
-      document.querySelectorAll('.lang-text').forEach(el => {
-        el.classList.remove('lang-active');
-        if (el.dataset.lang === lang) {
-          el.classList.add('lang-active');
+    document.getElementById('language-selector').addEventListener('change', function(event) {
+      const lang = event.target.value;
+      const langTexts = document.querySelectorAll('.lang-text');
+      langTexts.forEach(text => {
+        text.classList.remove('lang-active');
+        if (text.dataset.lang === lang) {
+          text.classList.add('lang-active');
         }
       });
     });
