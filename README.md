@@ -1,4 +1,3 @@
-# 再度HTMLテンプレートを生成して保存（セッションリセットにより再生成）
 html_template = """
 <!DOCTYPE html>
 <html lang="en">
