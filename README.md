@@ -1,102 +1,131 @@
+# 再度HTMLテンプレートを生成して保存（セッションリセットにより再生成）
+html_template = """
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hokkaido Travel Guide for Foreign Visitors</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore Hokkaido</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
+      font-family: 'Arial', sans-serif;
+      background: #f4f4f4;
       margin: 0;
       padding: 0;
-      text-align: center;
     }
     header {
-      background-color: #4CAF50;
+      background-color: #0066cc;
       color: white;
       padding: 1rem;
+      text-align: center;
     }
-    main {
-      padding: 2rem;
-    }
-    .map {
-      width: 100%;
-      height: 400px;
+    select {
       margin-top: 1rem;
+      padding: 0.5rem;
+    }
+    .city-section {
+      padding: 2rem;
+      background-color: #fff;
+      margin: 1rem auto;
+      width: 90%;
+      max-width: 1000px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     .spot {
       margin-bottom: 2rem;
     }
-    .spot-group {
-      margin-bottom: 4rem;
+    .spot img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
     }
-    footer {
-      background-color: #ddd;
-      padding: 1rem;
-      position: fixed;
+    .spot iframe {
       width: 100%;
-      bottom: 0;
+      height: 300px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+    .footer {
+      background-color: #0066cc;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    .lang-text {
+      display: none;
+    }
+    .lang-active {
+      display: block;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to Hokkaido!</h1>
-    <p>Explore top tourist spots across Sapporo, Otaru, Hakodate, Kushiro, and Niseko</p>
+    <h1 data-lang-group="title">
+      <span class="lang-text lang-active" data-lang="en">Explore Hokkaido</span>
+      <span class="lang-text" data-lang="ja">北海道を探検しよう</span>
+      <span class="lang-text" data-lang="zh">探索北海道</span>
+      <span class="lang-text" data-lang="fr">Explorez Hokkaidō</span>
+      <span class="lang-text" data-lang="ru">Исследуйте Хоккайдо</span>
+    </h1>
+    <select id="language-selector">
+      <option value="en">English</option>
+      <option value="ja">日本語</option>
+      <option value="zh">中文</option>
+      <option value="fr">Français</option>
+      <option value="ru">Русский</option>
+    </select>
   </header>
   <main>
-    <!-- Sapporo Spots -->
-    <div class="spot-group">
-      <h2>Sapporo - Top Tourist Spots</h2>
-
+    <section class="city-section">
+      <h2>Sapporo</h2>
       <div class="spot">
-        <h3>Sapporo Odori Park</h3>
-        <p>A famous park in the city center, ideal for festivals and outdoor events.</p>
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.122553722722!2d141.3434363157609!3d43.06209307915572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f56d75e317c8fcb%3A0x16b98f6609e63f74!2sSapporo%20Odori%20Park!5e0!3m2!1sen!2sjp!4v1681136898430!5m2!1sen!2sjp" allowfullscreen loading="lazy"></iframe>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Sapporo_Clock_Tower_2018.jpg/800px-Sapporo_Clock_Tower_2018.jpg" alt="Sapporo Clock Tower">
+        <h3 data-lang-group="spot1-title">
+          <span class="lang-text lang-active" data-lang="en">Sapporo Clock Tower</span>
+          <span class="lang-text" data-lang="ja">札幌時計台</span>
+          <span class="lang-text" data-lang="zh">札幌钟楼</span>
+          <span class="lang-text" data-lang="fr">Tour de l'horloge de Sapporo</span>
+          <span class="lang-text" data-lang="ru">Башня с часами Саппоро</span>
+        </h3>
+        <p data-lang-group="spot1-desc">
+          <span class="lang-text lang-active" data-lang="en">A historic clock tower built in 1878, symbolizing the city of Sapporo.</span>
+          <span class="lang-text" data-lang="ja">1878年に建てられた歴史的な時計台で、札幌の象徴です。</span>
+          <span class="lang-text" data-lang="zh">建于1878年的历史钟楼，是札幌的象征。</span>
+          <span class="lang-text" data-lang="fr">Une tour de l'horloge historique construite en 1878, symbole de Sapporo.</span>
+          <span class="lang-text" data-lang="ru">Историческая башня с часами, построенная в 1878 году, символ Саппоро.</span>
+        </p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.1460912420575!2d141.35445127609378!3d43.062095371136196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b2985c81c2231%3A0x88f71dbf83e5b45b!2z5LuZ6YO95pWZ5bqX5qCh5Lit5aSu5rC455Sw6ZaA!5e0!3m2!1sja!2sjp!4v1713000000000!5m2!1sja!2sjp"></iframe>
       </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2025 Hokkaido Travel Guide</p>
+  </footer>
+  <script>
+    const selector = document.getElementById('language-selector');
+    selector.addEventListener('change', (e) => {
+      const lang = e.target.value;
+      document.querySelectorAll('.lang-text').forEach(el => {
+        el.classList.remove('lang-active');
+        if (el.dataset.lang === lang) {
+          el.classList.add('lang-active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+"""
 
-      <div class="spot">
-        <h3>Sapporo TV Tower</h3>
-        <p>Experience panoramic views of Sapporo from this iconic observation tower.</p>
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.142495228571!2d141.3541023157605!3d43.06250327915558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f56d77a55e8e577%3A0x14f16cf17b8a78a5!2sSapporo%20TV%20Tower!5e0!3m2!1sen!2sjp!4v1681136942855!5m2!1sen!2sjp" allowfullscreen loading="lazy"></iframe>
-      </div>
+# 保存パス
+html_path = "/mnt/data/explore-hokkaido-multilang.html"
 
-      <div class="spot">
-        <h3>Historic Village of Hokkaido</h3>
-        <p>A living museum showcasing Hokkaido’s past, including traditional buildings and historic exhibits.</p>
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.5944817192296!2d141.38258911576066!3d43.06240757915558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f56d5e0f8c7a8af%3A0x61d8198b2b169b6!2sHistoric%20Village%20of%20Hokkaido!5e0!3m2!1sen!2sjp!4v1681137001602!5m2!1sen!2sjp" allowfullscreen loading="lazy"></iframe>
-      </div>
+# HTMLファイルとして保存
+with open(html_path, "w", encoding="utf-8") as f:
+    f.write(html_template)
 
-      <div class="spot">
-        <h3>Shiroi Koibito Park</h3>
-        <p>Famous chocolate factory and theme park, a great family attraction.</p>
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.040107975184!2d141.3188331157609!3d43.04161217915564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f56d79ad7b1a43b%3A0xfed1d20db0972b82!2sShiroi%20Koibito%20Park!5e0!3m2!1sen!2sjp!4v1681137054789!5m2!1sen!2sjp" allowfullscreen loading="lazy"></iframe>
-      </div>
-
-      <div class="spot">
-        <h3>Moerenuma Park</h3>
-        <p>A beautiful park featuring art installations and large outdoor spaces for walking.</p>
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.2800735251196!2d141.41567681576083!3d43.05880387915561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f56d79dd5b165f1%3A0x4adf94c44a7a906!2sMoerenuma%20Park!5e0!3m2!1sen!2sjp!4v1681137109873!5m2!1sen!2sjp" allowfullscreen loading="lazy"></iframe>
-      </div>
-    </div>
-
-    <!-- Otaru Spots -->
-    <div class="spot-group">
-      <h2>Otaru - Top Tourist Spots</h2>
-      <div class="spot">
-        <h3>Otaru Canal</h3>
-        <p>A scenic canal lined with historic warehouses, famous for its nostalgic atmosphere.</p>
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.338099508329!2d141.00308341575934!3d43.18920107915588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f56b441c27f913b%3A0x4855e35c6f7124e2!2sOtaru%20Canal!5e0!3m2!1sen!2sjp!4v1681137187815!5m2!1sen!2sjp" allowfullscreen loading="lazy"></iframe>
-      </div>
-
-      <div class="spot">
-        <h3>Otaru Music Box Museum</h3>
-        <p>A charming museum filled with antique music boxes from around the world.</p>
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.298682777688!2d141.00261131575936!3d43.189479179155875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f56b44aa61e4969%3A0x38d8460ca8d47de6!2sOtaru%20Music%20Box%20Museum!5e0!3m2!1sen!2sjp!4v1681137230327!5m2!1sen!2sjp" allowfullscreen loading="lazy"></iframe>
-      </div>
-
-      <div class="spot">
-        <h3>Otaru Snow Light Path</h3>
-        <p>A beautiful winter festival where lanterns light up the snowy streets.</p>
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.224717410956!2d141.00367881575928!3d43.19018917915581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f56b441bb251731%3A0x36f6de10c31506c5!2sOtaru%20Snow
+html_path
